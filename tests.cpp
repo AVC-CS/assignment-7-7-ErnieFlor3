@@ -4,58 +4,74 @@
 #include "catch.hpp"
 #include "main.hpp"
 // tests for exercise 1
-TEST_CASE("Ex1 makeNameRecord()", "[example]")
+TEST_CASE("Ex1 findmaxsum()", "[example]")
 {
-	const int N = 5000;
-	string state[N];
-	string gender[N];
-	int year[N];
-	string name[N];
-	int count[N];
-	int cnt;
+	const int NUM_ROWS = 6; // Number of rows
+	const int NUM_COLS = 5; // Number of columns
+	int result[SIZE] = {0};
+	int numbers[NUM_ROWS][NUM_COLS] = {{2, 7, 9, 6, 4},
+					   {6, 1, 8, 10, 4},
+					   {4, 3, 7, 2, 9},
+					   {9, 9, 0, 3, 1},
+					   {8, 8, 7, 8, 9},
+					   {1, 2, 1, 2, 3}};
 
-	cnt = makeNameRecord(state, gender, year, name, count);
-	cout << "****************************************\n";
-	INFO("the number of lines in file is incorrect " << cnt);
-	REQUIRE(cnt == 4080);
+	findMaxSum(result, numbers, NUM_ROWS, NUM_COLS);
+	cout << "The result values are:";
+	for (int i = 0; i < NUM_COLS; i++)
+		cout << setw(5) << result[i];
+	cout << endl;
+	REQUIRE(result[0] == 8);
+	REQUIRE(result[1] == 8);
+	REQUIRE(result[2] == 7);
+	REQUIRE(result[3] == 8);
+	REQUIRE(result[4] == 9);
 }
 // tests for exercise 2
-TEST_CASE("Ex2 findNames()", "[example]")
+TEST_CASE("Ex2 findMaxElm()", "[example]")
 {
-	const int N = 5000;
-	string state[N];
-	string gender[N];
-	int year[N];
-	string name[N];
-	int count[N];
-	int cnt;
-	char starting = 'S';
-	string stname = "CA";
+	const int NUM_ROWS = 6; // Number of rows
+	const int NUM_COLS = 5; // Number of columns
+	int result[SIZE] = {0};
+	int numbers[NUM_ROWS][NUM_COLS] = {{2, 7, 9, 6, 4},
+					   {6, 1, 8, 10, 4},
+					   {4, 3, 7, 2, 9},
+					   {9, 9, 0, 3, 1},
+					   {8, 8, 7, 8, 9},
+					   {1, 2, 1, 2, 3}};
 
-	cnt = makeNameRecord(state, gender, year, name, count);
-	cout << "****************************************\n";
-	cnt = findNames(cnt, state, gender, year, name, count, starting, stname);
-
-	INFO("the number of lines in file is incorrect " << cnt);
-	REQUIRE(cnt == 11);
+	findMaxElm(result, numbers, NUM_ROWS, NUM_COLS);
+	cout << "The result values are:";
+	for (int i = 0; i < NUM_ROWS; i++)
+		cout << setw(5) << result[i];
+	cout << endl;
+	REQUIRE(result[0] == 9);
+	REQUIRE(result[1] == 10);
+	REQUIRE(result[2] == 9);
+	REQUIRE(result[3] == 9);
+	REQUIRE(result[4] == 9);
+	REQUIRE(result[5] == 3);
 }
-// tests for exercise 3
-TEST_CASE("Ex3 findNames()", "[example]")
+TEST_CASE("Ex3 findMaxVal()", "[example]")
 {
-	const int N = 5000;
-	string state[N];
-	string gender[N];
-	int year[N];
-	string name[N];
-	int count[N];
-	int cnt;
-	char starting = 'J';
-	string stname = "TX";
+	const int NUM_ROWS = 6; // Number of rows
+	const int NUM_COLS = 5; // Number of columns
+	int result[SIZE] = {0};
+	int numbers[NUM_ROWS][NUM_COLS] = {{2, 7, 9, 6, 4},
+					   {6, 1, 8, 10, 4},
+					   {4, 3, 7, 2, 9},
+					   {9, 9, 0, 3, 1},
+					   {8, 8, 7, 8, 9},
+					   {1, 2, 1, 2, 3}};
 
-	cnt = makeNameRecord(state, gender, year, name, count);
-	cout << "****************************************\n";
-	cnt = findNames(cnt, state, gender, year, name, count, starting, stname);
-
-	INFO("the number of lines in file is incorrect " << cnt);
-	REQUIRE(cnt == 10);
+	findMaxVal(result, numbers, NUM_ROWS, NUM_COLS);
+	cout << "The result values are:";
+	for (int i = 0; i < NUM_COLS; i++)
+		cout << setw(5) << result[i];
+	cout << endl;
+	REQUIRE(result[0] == 6);
+	REQUIRE(result[1] == 1);
+	REQUIRE(result[2] == 8);
+	REQUIRE(result[3] == 10);
+	REQUIRE(result[4] == 4);
 }
