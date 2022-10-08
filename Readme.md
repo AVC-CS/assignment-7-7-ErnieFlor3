@@ -5,27 +5,16 @@
 
 ---
 
-### Assignment A7-6: Lab 7-8
+### Assignment A7-7: Lab 7-9
 
 ### Open the "main.hpp"
 
 > Complete functions
 
-### Goal of this lab
-
-- - Lab 7-8:
-- - In this programming lab, we are going to read all lines from the file “babynames.txt”
-- - The file “babynames.txt” has 4080 lines and each line consists of 5 fields, State name, Gender, Year, Name, The number referenced.
-- - The Lab 7-8 program reads from all lines and then constructs the arrays to store all lines as follows.
-
-### Input and Output
-
-- Input: None <br>
--  Output: Print the names in "state name" starting with '*'
 
 ### 👓 Watch:
 
-- [Array as Function Arguments Lab 7-8. (9 mins)](https://youtu.be/62chBGoql_Q)
+- [Two Dimensional Arrays [Lab7-9]]. (9 mins)](https://youtu.be/X6qdLYqv9fU)
 
 ## You can test your program by typing the command
 
